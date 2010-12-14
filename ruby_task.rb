@@ -1,8 +1,19 @@
-class PersonDetails
-  def read_from_console(entered_string = "This. is. a. test. string.")
-    entered_string = gets
+class ResumeDetails
+  attr_reader :name
+  attr_reader :age
+  attr_reader :address
+  
+    
+  def initialize(name, age, address)
+    @name = name
+    @age = age.to_i
+    @address = address
+  end
+end
+
+class InputOutput
+  def read_from_console(obj=STDIN)
+    entered_string = obj.gets
     return entered_string
   end
-  pd = PersonDetails.new
-  puts "the entered string is ::  #{pd.read_from_console()}"
 end
