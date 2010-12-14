@@ -1,0 +1,14 @@
+require 'ruby_task'
+require 'test/unit'
+
+class TestResume <Test::Unit::TestCase
+  def test_wirte_to_file
+    file_text = ""
+    File.open("testfile") do|file|
+      while line = file.gets
+        file_text += line
+      end
+    end
+    assert_not_nil(file_text.size,"the file is empty")
+  end
+end

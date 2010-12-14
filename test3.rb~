@@ -1,0 +1,5 @@
+require 'ruby_task'
+require 'test/unit'
+
+class TestResume < Test::Unit::TestCase
+  def test_

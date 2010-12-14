@@ -1,0 +1,8 @@
+require 'ruby_task'
+require 'test/unit'
+
+class TestResume < Test::Unit::TestCase
+  def test_write_to_file
+    io = InputOutput.new
+    rd = ResumeDetails.new("ernest",22,"dharwad")
+    io.write_to_file(rd.name,rd.age , rd.address)
