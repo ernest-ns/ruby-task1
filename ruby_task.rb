@@ -1,12 +1,15 @@
 require 'rubygems'
 require 'pdf/toolkit'
 require 'pdf/writer'
+require 'ruby_task_pdf'
+require 'ruby_task_txt'
 
 class ResumeDetails
   attr_reader :name
   attr_reader :age
   attr_reader :address
   attr_reader :file_type
+  attr_reader :resume_file_name
   
   def name=(new_name)
     @name = new_name
@@ -23,12 +26,18 @@ class ResumeDetails
   def file_type=(new_file_type)
     @file_type = new_file_type
   end
+
+  def resume_file_name=(new_resume_file_name)
+    @resume_file_name = new_resume_file_name
+  end
+  
     
   def initialize(name, age, address , file_type ="txt" )
     @name = name
     @age = age.to_i
     @address = address
     @file_type = file_type
+    @resume_file_name = "resume_details"
   end
   
   def validate
@@ -71,17 +80,13 @@ class InputOutput
   def write_to_file(rd)
     rd.validate()
     file_entry = "#{rd.name},#{rd.age},#{rd.address}"
-
-    if(rd.file_type == "pdf") :
-      write_to_pdf("resume_details.pdf",file_entry)  
-    else
-      write_to_txt("resume_details.txt",file_entry)
-    end  
+    file_name = rd.resume_file_name+"."+rd.file_type
+    eval(rd.file_type.capitalize+".append_to_file(file_name,file_entry)")
   end
 end
 
 
-#=begin
+=begin
 class MainClass
 
   io =InputOutput.new
@@ -99,4 +104,4 @@ class MainClass
   io.write_to_file(rd)
   puts "Data Written to file"
 end
-#=end
+=end

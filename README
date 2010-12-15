@@ -1,0 +1,65 @@
+>> def txt.app()
+>> end
+NameError: undefined local variable or method `txt' for main:Object
+	from (irb):9
+>> class txt
+>> def txt.app()
+>> end
+>> end
+SyntaxError: compile error
+(irb):11: class/module name must be CONSTANT
+	from (irb):14
+>> class txt
+>> 
+
+^C
+>> class Txt
+>> def Txt.app()
+>> end
+>> end
+=> nil
+>> str = eval(file_type+".app()")
+NameError: undefined local variable or method `txt' for main:Object
+	from (irb):20
+	from (irb):20
+>> file_type = "Txt"
+=> "Txt"
+>> str = eval(file_type+".app()")
+=> nil
+>> eval(file_type+".app()")
+=> nil
+>> class Txt
+>> def Txt.app()
+>> puts inside app
+>> end
+>> end
+=> nil
+>> eval(file_type+".app()")
+TypeError: can't modify frozen string
+	from (irb):29
+	from (irb):29
+>> def Txt.app()
+>> puts "inside app"
+>> end
+=> nil
+>> eval(file_type+".app()")
+inside app
+=> nil
+>> fn = "file name"
+=> "file name"
+>> ft = "simple text"
+=> "simple text"
+>> def Txt.append(fn,ft)
+>> puts "Inside append:"+fn+":"+ft
+>> end
+=> nil
+>> eval(file_type+".append(fn,ft)")
+Inside append:file name:simple text
+=> nil
+>> 
+>> file_type = "txt"
+=> "txt"
+>> eval(file_type.capitalize+".append(fn,ft)")
+Inside append:file name:simple text
+=> nil
+>> 
