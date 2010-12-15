@@ -1,0 +1,6 @@
+.*.sw?
+nbproject
+pkg 
+.rvmrc
+.bundle
+Gemfile.lock
