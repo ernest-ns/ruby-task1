@@ -7,3 +7,9 @@ txt
 sand,321,box
 ernest,22,dharwad
 factory,123,method
+ernest,22,dharwad
+ernest,22,dharwad
+ernest,22,dharwad
+testing_ernest,123,ernest_testing
+ernest,22,dharwad
+TesTing,324,TesTing

@@ -27,7 +27,7 @@ endobj
 endobj
 5 0 obj
 <<
-/CreationDate (D:201012160643)
+/CreationDate (D:201012160956)
 /Creator (test_pdf.rb)
 /Producer (PDF::Writer for Ruby)
 >>
@@ -40,18 +40,19 @@ endobj
 endobj
 7 0 obj
 <<
-/Length 570 >>
+/Length 776 >>
 stream
 
 0.000 0.000 0.000 rg
 0.000 0.000 0.000 RG
 BT 36.000 744.440 Td /F1 10.0 Tf 0 Tr (This is a sample text sample text to be appended sample text to be appended sample text to be appended sample text to ) Tj ET
 BT 36.000 732.880 Td /F1 10.0 Tf 0 Tr (be appended sample text to be appended sample text to be appended sample text to be appended sample text to be ) Tj ET
-BT 36.000 721.320 Td /F1 10.0 Tf 0 Tr (appended sample text to be appended
+BT 36.000 721.320 Td /F1 10.0 Tf 0 Tr (appended sample text to be appended sample text to be appended sample text to be appended sample text to be ) Tj ET
+BT 36.000 709.760 Td /F1 10.0 Tf 0 Tr (appended This is another test This is another test This is another test This is another test
 ) Tj ET
-BT 36.000 709.760 Td /F1 10.0 Tf 0 Tr (
+BT 36.000 698.200 Td /F1 10.0 Tf 0 Tr (
 ) Tj ET
-BT 36.000 698.200 Td /F1 10.0 Tf 0 Tr (sample text to be appended) Tj ET
+BT 36.000 686.640 Td /F1 10.0 Tf 0 Tr (This is another test) Tj ET
 endstream
 endobj
 
@@ -73,7 +74,7 @@ xref
 0000000291 00000 n 
 0000000399 00000 n 
 0000000462 00000 n 
-0000001084 00000 n 
+0000001290 00000 n 
 
 trailer
   << /Size 9
@@ -81,6 +82,5 @@ trailer
  /Info 5 0 R
   >>
 startxref
-1191
+1397
 %%EOF
-Sample text to be written

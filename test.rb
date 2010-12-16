@@ -1,4 +1,4 @@
-require 'ruby_task'
+require 'resume_details'
 require 'test/unit'
 require 'rubygems'
 require 'pdf/toolkit'
