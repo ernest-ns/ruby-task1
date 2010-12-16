@@ -53,40 +53,30 @@ class ResumeDetails
 end
 
 class InputOutput
-  def write_to_pdf(file_name,file_entry)
-    resume = PDF::Toolkit.open(file_name)
-    resume_file_text = resume.to_text.read
-    resume_file_text = resume_file_text+file_entry
-    resume = PDF::Writer.new()
-    resume.text(resume_file_text)
-    resume_file_stream = resume.render()
-    File.open(file_name , "w") do |file|
-      file.puts resume_file_stream
-    end
-  end
-
-  def write_to_txt(file_name,file_entry)
-    File.open(file_name,"a") do |file|
-      file.puts file_entry
-    end
-  end
-  
-  
+    
   def read_from_console(obj=STDIN)
     entered_string = obj.gets.chomp
     return entered_string
+  end
+
+  def create_document(file_type) #returns an object of the file type depending  on the parameters passed
+    return (eval( file_type.capitalize+".new"  ) )
   end
   
   def write_to_file(rd)
     rd.validate()
     file_entry = "#{rd.name},#{rd.age},#{rd.address}"
     file_name = rd.resume_file_name+"."+rd.file_type
-    eval(rd.file_type.capitalize+".append_to_file(file_name,file_entry)")
+#    eval(rd.file_type.capitalize+".append_to_file(file_name,file_entry)")
+    #create an object
+    file_obj = create_document(rd.file_type)
+    file_obj.append_to_file(file_name,file_entry)
+    #call the method on that object
   end
 end
 
 
-=begin
+begin
 class MainClass
 
   io =InputOutput.new
@@ -104,4 +94,4 @@ class MainClass
   io.write_to_file(rd)
   puts "Data Written to file"
 end
-=end
+end
